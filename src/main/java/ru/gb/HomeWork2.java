@@ -60,6 +60,7 @@ public class HomeWork2 {
         }
         return bln;
     }
+    //
 
     public static String lineOutput(String word, int j) {
         for ( int i = 1; i <= j; i++) {
