@@ -1,6 +1,8 @@
 package ru.gb.animal;
 
 public class Cat extends Animal {
+
+    private static int trueCat;
     public Cat(String name, int run, int swim) {
         super(name, run, swim);
     }
@@ -11,7 +13,7 @@ public class Cat extends Animal {
             this.run = run;
         }else if(run>200){
             this.run = 200;
-            System.out.println("Некоректное условие для кошки. run =  " + run + " присвоилось значение 200м\n");
+            System.out.println("Превышение норматива у кошки. run =  " + run + " присвоилось значение 200м\n");
         }else{
             System.out.println("run = " +run + " должно быть положительным!\n");
         }
@@ -21,17 +23,17 @@ public class Cat extends Animal {
     public void setSwim(int swim) {
         //if(swim != 0){
         this.swim = swim;
-        //System.out.println("Кошки не плавают!\n");
-        // }
     }
 
     @Override
-    public void print ( int score){
-        if (run > 0 && run <= 200) {
-            System.out.printf("\n%s пробежала %d м.", name, run);
-            if( swim != 0) System.out.print(" Кошки не плавают!");
+    public void print ( int score, int length){
+        if (run > 0 && run <= 200 && swim == 0) {
+            trueCat++;
+            System.out.printf("%s пробежала %d м.\n", name, run);
+            //if( swim != 0) System.out.print(" Кошки не плавают!");
         } else {
-            System.out.print("\nУ кошки " + score + " неверно заданны параметры!");
+            System.out.println("У кошки " + score + " неверно заданны параметры! Кошки не плавают!");
         }
+        if(score == length) System.out.println("Кол-во правильных кошек: " + trueCat);
     }
 }

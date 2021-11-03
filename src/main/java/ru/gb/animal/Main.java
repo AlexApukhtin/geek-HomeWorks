@@ -8,7 +8,7 @@ public class Main {
         Animal[] cat = new Cat[3];
         Animal[] other = new Other[2];
         dog[0] = new Dog("Моника", 400,6);
-        dog[1] = new Dog("Софа", 600, 5);
+        dog[1] = new Dog("Софа", 600, -5);
         dog[2] = new Dog("Криш", 300, 12);
 
         cat[0] = new Cat("Барсик", 250,0);
@@ -25,20 +25,21 @@ public class Main {
 
         for (int i = 0; i <dog.length; i++) {
             dogScore++;
-            dog[i].print(dogScore);
+            dog[i].print(dogScore, dog.length);
         }
         System.out.println("Всего собак: "+ dogScore);
+        System.out.println();
 
         for (int i = 0; i <cat.length; i++) {
             catScore++;
-            cat[i].print(catScore);
+            cat[i].print(catScore, cat.length);
         }
-        System.out.println("\nВсего кошек: " + catScore);
+        System.out.println("Всего кошек: " + catScore);
         System.out.println();
 
         for (int i = 0; i < other.length; i++) {
             otherScore++;
-            other[i].print(otherScore);
+            other[i].print(otherScore, other.length);
         }
         System.out.println("Остальных животных: "+ otherScore);
         System.out.println("Всего животных: " + (catScore + dogScore+ otherScore));

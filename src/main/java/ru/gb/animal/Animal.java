@@ -13,7 +13,7 @@ public abstract class Animal {
         setSwim(swim);
     }
 
-    public abstract void print(int score);
+    public abstract void print(int score, int length);
 
     public String getName() {
         return name;
