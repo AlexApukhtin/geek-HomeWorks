@@ -29,7 +29,7 @@ public class Cat extends Animal {
     public void print ( int score, int length){
         if (run > 0 && run <= 200 && swim == 0) {
             trueCat++;
-            System.out.printf("%s пробежала %d м.\n", name, run);
+            System.out.printf("%s пробежала %d м.\n", getName(), getRun());
             //if( swim != 0) System.out.print(" Кошки не плавают!");
         }
         if(swim>0) System.out.println("Кошки(" +score+ ") не плавают!");

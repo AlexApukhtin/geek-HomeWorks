@@ -36,7 +36,7 @@ public class Dog extends Animal{
     public void print(int score, int length) {
         if (run > 0 && run <= 500 && swim > 0 && swim <= 10) {
             trueDog++;
-            System.out.printf("%s пробежала %d м., проплыла %dм.\n", name, run, swim);
+            System.out.printf("%s пробежала %d м., проплыла %dм.\n", getName(), getRun(), getSwim());
         }
         if(run>500){
             System.out.println("Собаки("+score+") столько не бегают.run = "+ run + " присвоилось значение 500м");

@@ -4,19 +4,20 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Animal[] dog = new Dog[3];
-        Animal[] cat = new Cat[3];
-        Animal[] other = new Other[2];
-        dog[0] = new Dog("Моника", 400,6);
-        dog[1] = new Dog("Софа", 300, 5);
-        dog[2] = new Dog("Криш", 600, 12);
-
-        cat[0] = new Cat("Барсик", 250,0);
-        cat[1] = new Cat("Мурзик", 100,2);
-        cat[2] = new Cat("Муся", 140,0);
-
-        other[0] = new Other("Кеша",50,0,"Попугай");
-        other[1] = new Other("Эдик",20,2,"Хорёк");
+        Animal[] dog = {
+                new Dog("Моника", 400,6),
+                new Dog("Софа", 300, 5),
+                new Dog("Криш", 600, 12),
+        };
+        Animal[] cat = {
+                new Cat("Барсик", 250,0),
+                new Cat("Мурзик", 100,2),
+                new Cat("Муся", 140,0),
+        };
+        Animal[] other = {
+                new Other("Кеша",50,0,"Попугай"),
+                new Other("Эдик",20,2,"Хорёк"),
+        };
         int dogScore = 0;
         int catScore = 0;
         int otherScore = 0;
@@ -27,7 +28,6 @@ public class Main {
             dogScore++;
             dog[i].print(dogScore, dog.length);
         }
-       // System.out.println(trueDog);
         System.out.println("Всего собак: "+ dogScore);
         System.out.println();
 

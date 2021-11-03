@@ -2,7 +2,7 @@ package ru.gb.animal;
 
 public abstract class Animal {
 
-    protected String name;
+    private String name;
     protected int run;
     protected int swim;
     protected String view;
@@ -14,6 +14,8 @@ public abstract class Animal {
     }
 
     public abstract void print(int score, int length);
+
+    public String getView() {return view;}
 
     public String getName() {
         return name;
