@@ -9,7 +9,7 @@ public class Cat extends Animal {
 
     @Override
     public void setRun(int run) {
-        if( run <= 200 && run >=0){
+        if(run >=0){
             this.run = run;
         }else if(run>200){
             this.run = 200;
@@ -31,8 +31,11 @@ public class Cat extends Animal {
             trueCat++;
             System.out.printf("%s пробежала %d м.\n", name, run);
             //if( swim != 0) System.out.print(" Кошки не плавают!");
-        } else {
-            System.out.println("У кошки " + score + " неверно заданны параметры! Кошки не плавают!");
+        }
+        if(swim>0) System.out.println("Кошки(" +score+ ") не плавают!");
+        if(run>200){
+            System.out.println("Кошки("+score+") столько не бегают.run = "+ run + " присвоилось значение 200м");
+            this.run = 200;
         }
         if(score == length) System.out.println("Кол-во правильных кошек: " + trueCat);
     }
