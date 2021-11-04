@@ -52,6 +52,5 @@ public class Dog extends Animal{
             System.out.println("Собаки("+score+") столько не плавают. swim = " + swim + " присвоилось значение 10м");
             this.swim = DOG_SWIM_LIMIT;
         }
-       // if(score == length) System.out.println("Кол-во правильных собак: " + trueDog);
     }
 }

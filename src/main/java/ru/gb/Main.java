@@ -20,7 +20,7 @@ public class Main {
             score++;
             animals[i].print(score, animals.length);
         }
-
+//
         System.out.println("\nПравильных собак: "+ Dog.getTrueDog());
         System.out.println("Всего собак: "+ Dog.getDogScore());
 

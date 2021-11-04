@@ -12,7 +12,7 @@ public abstract class Animal {
         count++;
         setName(name);
         setRun(run);
-        setSwim(swim);
+        setSwim(swim);//
     }
 
     public abstract void print(int score, int length);

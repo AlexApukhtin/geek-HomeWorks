@@ -16,7 +16,7 @@ public class Cat extends Animal {
     }
 
     public static int getCatScore() {
-        return catScore;
+        return catScore;//
     }
 
     @Override

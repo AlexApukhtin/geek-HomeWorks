@@ -30,6 +30,6 @@ public class Other extends Animal {
 
     @Override
     public void print(int score, int length) {
-        System.out.printf("Это %s. %s пробежал %dм. и проплыл %dм.\n", getView(), getName(), getRun(), getSwim());
+        System.out.printf("Это %s. %s пробежал %dм. и проплыл %dм.\n", getView(), getName(), getRun(), getSwim());//
     }
 }
